@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consultorio médico</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="contenedorTodo">
+            
+            <!-- /////////////////////////////// BOTONES NAVEGACION ////////////////////////////// -->
+            <div id="parteDeArriba">
+                <input type="button" class="todos paciente " id="secPacientesSolicitarConsulta" value="Solicitar consulta">
+                <input type="button" class="todos paciente " id="secPacientesConsultas" value="Consultas">
+                <input type="button" class="todos paciente"  id="secDatos" value="Datos personales">
+                <input type="button" class="todos medico" id="secMedicoConsulta" value="Consultas">
+                <input type="button" class="todos medico" id="secMedicoBuscarPaciente" value="Buscar paciente">
+                <input type="button" class="todos medico" id="secTodosLosPacientes" value="TP">
+                <input type="button" class="todos medico" id="secTodosLosMedicos" value="TM">
+                <input type="button" class="todos medico" id="secTodasLasConsultas" value="TC">
+                <input type="button" class="todos paciente medico" id="secSalir" value="Salir">
+            </div>
+            <h2>Consultorio médico</h2>
+            <hr>
+            
+            <!-- //////////////////////////////////// LOGIN ////////////////////////////////////// -->
+            <div id="divLogin" class="seccion">
+                    <div class="divMitad">
+                        <h3>Paciente</h3>
+                        <label for="txtLogPacNumero">Número de usuario</label>
+                        <input type="text" id="txtLogPacNumero" value="31843782"><br>
+                        <label for="txtLogPacContrasenia">Contraseña</label>
+                        <input type="password" id="txtLogPacContrasenia" value="123"><br>
+                        <input type="button" id="btnLogPacIngresar" value="Ingresar"><br>
+                        <p id="pLogPacError"></p>
+                    </div>
+                    <div class="divMitad">
+                        <h3>Médico</h3>
+                        <label for="txtLogMedNumero">Número de profesional</label>
+                        <input type="text" id="txtLogMedNumero" value="4356"><br>
+                        <label for="txtLogMedContrasenia">Contraseña</label>
+                        <input type="password" id="txtLogMedContrasenia" value="123"><br>
+                        <input type="button" id="btnLogMedIngresar" value="Ingresar"><br>
+                        <p id="pLogMedError"></p>
+                    </div>
+                    
+                    <br>
+                    <p>Santiago C - Programación 1 Marzo 2017 - Analista Programador ORT</p>
+                    <p>Sistema de gestión de un consultorio médico. HTML, CSS, Javascript y Jquery.</p>
+
+                </div>
+
+                
+
+            <div id="divIzquierda">
+                
+                <!-- //////////////////////////////// BIENVENIDO ///////////////////////////////// -->
+                <div id="divBienvenido" class="seccion">
+                    <p id="pBienvenido"></p>
+                </div>
+                
+                <!-- ///////////////////////// PACIENTE SOLICITAR CONSULTA /////////////////////// -->
+                <div id="divPacientesSolicitarConsulta" class="seccion">
+                    <h3>Solicitar consulta</h3>
+                    <p id="pConsultas"></p>
+                    <input type="button" id="btnSolicitarConsulta" value="Solicitar consulta"><br>
+                    <p id="pMensajeConsultas"></p>
+                    
+                </div>
+                
+                <!-- /////////////////////////// PACIENTE VER CONSULTAS ////////////////////////// -->
+                <div id="divPacientesConsultas" class="seccion">
+                    <p id="pConsultasPendientes"></p>
+                    <hr>
+                    <p id="pConsultasFinalizadas"></p>
+                </div>
+                
+                <!-- /////////////////////////////// PACIENTE DATOS ////////////////////////////// -->
+                <div id="divDatos" class="seccion">
+                    <h3>Datos personales</h3>
+                    <p id="pDatos"></p>
+                    <br><hr>
+                    <input type="button" id="btnPacEditarDatos" value="Editar mis datos">
+                    <p id="pEditarDatos"></p>
+                    <input type="button" id="btnPacEditarDatosAceptar" value="Aceptar">
+                </div>
+                
+                <!-- ////////////////////////////// MEDICO CONSULTAS ///////////////////////////// -->
+                <div id="divMedicoConsultas" class="seccion">
+                    <h3>Consultas pendientes</h3>
+                    <p id="pTodasMisConsultas"></p>
+                    <p id="pConsultaActual"></p>
+                    
+                </div>
+                <!-- /////////////////////////// MEDICO CONSULTA ACTUAL ////////////////////////// -->
+                <div id="divMedicoConsultaActual" class="seccion">
+                    <p id="pMedicoConsultaActual"></p>
+                    
+                    <label for="txtPeso">Peso (en kilogramos): </label>
+                    <input type="text" id="txtPeso"><br>
+                    
+                    <label for="txtAltura">Altura (en metros): </label>
+                    <input type="text" id="txtAltura"><br>
+                    
+                    <input type="button" id="btnIngresarPesoAltura" value="Ingresar peso y altura"><br>
+                    
+                    <p id="pMensajePesoAltura"></p>
+                    
+                    <label for="txtDescripcion">Descripción: </label>
+                    <textarea rows="7" cols="50" id="txtDescripcion"></textarea>
+                    
+                    <input type="button" id="btnMarcarComoPaga" value="Marcar como paga">
+                    <input type="button" id="btnFinalizarConsulta" value="Finalizar consulta"><br>
+                    
+                    <p id="pFinalizarConsulta"></p>
+                </div>
+                
+                <!-- ////////////////////////// MEDICO BUSCAR PACIENTES ////////////////////////// -->
+                <div id="divMedicoBuscarPaciente" class="seccion">
+                    <h3>Buscar paciente</h3>
+                    <label for="txtMedicoBuscarPaciente">Número del paciente: </label>
+                    <input type="text" id="txtMedicoBuscarPaciente" value="31843782"><br>
+                    
+                    <input type="button" id="btnBuscarPaciente" value="Buscar"><br>
+                    
+                    <p id="pMedicoBuscarPaciente"></p>
+                    
+                    <p id="pMedicoBuscarPacienteInfo"></p>
+                    
+                    <input type="button" id="btnMedicoHabilitarPaciente" value="Habilitar"><br><br>
+                </div>
+                
+            </div>
+            
+            <!-- /////////////////////////////// TODOS LOS PACIENTES ///////////////////////////// -->
+                <div id="divListaPacientes" class="seccion">
+                    <p id="pListaPacientes"></p><br>
+                </div>
+                
+                <!-- //////////////////////////// TODOS LOS MEDICOS ////////////////////////////// -->
+                <div id="divListaMedicos" class="seccion">
+                    <p id="pListaMedicos"></p><br>
+                </div>
+                
+                <!-- ///////////////////////////// TODAS LAS CONSULTAS /////////////////////////// -->
+                <div id="divListaTodasConsultas" class="seccion">
+                    <p id="pListaTodasConsultas"></p><br>
+                </div>
+            
+            <!-- //////////////////////////////// LISTA DERECHA ////////////////////////////////// -->
+            <div id="divDerecha">
+                <h3>Consultas finalizadas</h3>
+                <p id="pListaDerecha"></p>
+            </div>
+            
+        </div>
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/datos.js" type="text/javascript"></script>
+        <script src="js/js.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+html,body { 
+    margin: 0px; 
+    padding: 0px;
+    
+}
+#contenedorTodo {
+    width: 960px;
+    height: 1080px;
+    margin: 0 auto;
+}
+#parteDeArriba {
+    float: right;
+    display: block;
+}
+#divIzquierda {
+    width: 55%;
+    margin: 0 auto;
+    float: left;
+    
+}
+#divDerecha {
+    width: 44%;
+    margin: 0 auto;
+    float: right;
+    display: none;
+}
+#divLogin {
+    width: 60%;
+    margin: 0 auto;
+}
+#divBienvenido {
+    position: absolute;
+}
+.divMitad {
+    width: 48%;
+    margin: 0 auto;
+    padding-right: 10px;
+    float: left;
+}
+
+.todos, .seccion {
+    display: none;
+}
+
+img {
+    float: left;
+    padding-right: 20px;
+}
+
+table, td, th {    
+    border: 2px solid #EEE;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 5px;
+}
+tr:hover{
+    background-color:#f5f5f5
+}
+
+hr {
+    border-top: 1px solid #EEE
+}
+textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: #EEE;
+    border: none;
+    padding: 7px 17px;
+    margin: 5px 0;
+}
+input[type="button"]:hover {
+    background-color: #DDD;
+}
+input[type="button"]:active {
+    position: relative;
+    top: 2px;
+}
+input[type="button"]:focus {
+    outline: 0;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
